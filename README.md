@@ -11,9 +11,12 @@ LogHawkP4 is a simple and effective tool designed to automate the process of mon
 
 ---
 
-## 📁 Step-by-Step Instructions
+🚀 Features
+✅ Aggregates 4 logs (access.log, app.log, auth.log and system.log) into 1 file
+✅ Run Python Code to analyze the final aggregate text file
+✅ Cron job running in background to automate the log generation every 30 mins, everyday
 
----
+🛠️ Usage
 
 ### 1️⃣ Run the Bash Script
 
@@ -21,19 +24,40 @@ The Bash script collects multiple logs and combines them into one file for analy
 
 ```bash
 bash ./aggregateLogHawk.sh
- What it does:
 
-Aggregates the following log files:
+### 2️⃣ Run the Python Script:
+python3 loghawkP4.py
 
-access.log
+### 3️⃣ Python Output Results
+After execution, the script creates a report file:
 
-app.log
+swift
+Copy
+Edit
+/Users/briones/Desktop/Shared/Outputs/AnalysisOutput.txt
 
-auth.log
+### 4️⃣ Automate with Cron Job
+To automate both the Bash and Python scripts:
 
-system.log
+Add this line to your crontab:
+bash
+Copy
+Edit
+*/30 * * * * /home/student/Downloads/P4LogHawkLogs/aggregateLogHawk.sh
+📆 This will:
 
-Saves them into:
+Run the aggregation and analysis every 30 minutes, every day
 
-/home/student/Downloads/P4LogHawkLogs/Output/aggLog.log
+Free up the analyst to focus on other security tasks
 
+💡 To edit your crontab, run:
+
+bash
+Copy
+Edit
+crontab -e
+
+📝 License
+Use this script responsibly. If you get caught encoding your credentials in Base64, we take zero responsibility. 😆
+
+P.S. If you see Base64 in a login token, ask yourself: What are they trying to hide? 😏
