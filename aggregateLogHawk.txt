@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#Setting the paths for all 4 logfiles that will be aggregated
+LOG1="/home/student/accesslog.txt"
+LOG2="/home/student/applog.txt"
+LOG3="/home/student/authlog.txt"
+LOG4="/home/student/systemlog.txt"
+
+#Setting up the path for where the finished aggregated file will go
+OUTPUT="/home/student/Downloads/P4LogHawkLogs/Output/aggLog.txt"
+
+#During execution, let the user know what is happening while script is working. 
+echo "Aggregating logs into $OUTPUT..."
+
+#Clear the output file if it exists, or create it if it does not
+> "$OUTPUT"
+
+#Loop through all 4 log file paths
+for LOGFILE in "$LOG1" "$LOG2" "$LOG3" "$LOG4"; do
+
+#Below is checking to make sure that the log files exist before trying to read it
+  if [[ -f "$LOGFILE" ]]; then
+
+#Add a label to show which log file this section came from
+	echo "==== Contents of $LOGFILE ====" >> "$OUTPUT"
+
+#Copy all lines from the log file into the output file
+	cat "$LOGFILE" >> "$OUTPUT"
+
+#Add a blank line after each log section for easier reading
+	echo -e "\n" >> "$OUTPUT"
+  else
+# If the file does not exist, show a warning but move on.
+	echo "Warning! $LOGFILE not found, skipping."
+
+  fi
+# Let the user know that the task has finished
+done
+
+echo "Aggregation successful! Combined logs have been saved to $OUTPUT."
