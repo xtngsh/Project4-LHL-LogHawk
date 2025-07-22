@@ -1,0 +1,94 @@
+==== Contents of /home/student/accesslog.txt ====
+192.168.1.20 - - [17/Feb/2025:10:10:12 +0000] "GET /index.html HTTP/1.1" 200 5123
+192.168.1.35 - - [17/Feb/2025:10:12:22 +0000] "GET /about.html HTTP/1.1" 200 3001
+203.0.113.50 - - [17/Feb/2025:10:15:33 +0000] "GET /admin HTTP/1.1" 401 123
+203.0.113.50 - - [17/Feb/2025:10:15:35 +0000] "GET /admin HTTP/1.1" 401 123
+203.0.113.50 - - [17/Feb/2025:10:15:37 +0000] "GET /admin HTTP/1.1" 401 123
+203.0.113.50 - - [17/Feb/2025:10:15:45 +0000] "GET /admin HTTP/1.1" 403 234
+45.67.89.200 - - [17/Feb/2025:10:20:15 +0000] "GET /wp-login.php HTTP/1.1" 403 765
+198.51.100.99 - - [17/Feb/2025:10:22:05 +0000] "POST /api/data HTTP/1.1" 200 1280
+192.168.1.50 - - [17/Feb/2025:10:25:02 +0000] "GET /dashboard HTTP/1.1" 200 4900
+45.67.89.250 - - [17/Feb/2025:10:30:20 +0000] "GET /wp-login.php HTTP/1.1" 403 765
+192.168.1.40 - - [17/Feb/2025:10:35:25 +0000] "GET /contact HTTP/1.1" 200 4205
+203.0.113.75 - - [17/Feb/2025:10:40:15 +0000] "GET /wp-admin HTTP/1.1" 401 1345
+192.168.1.25 - - [17/Feb/2025:10:45:05 +0000] "GET /login HTTP/1.1" 200 3300
+203.0.113.60 - - [17/Feb/2025:10:50:13 +0000] "GET /admin HTTP/1.1" 401 1456
+198.51.100.150 - - [17/Feb/2025:10:55:25 +0000] "POST /api/login HTTP/1.1" 200 876
+45.67.89.101 - - [17/Feb/2025:11:00:05 +0000] "GET /wp-login.php HTTP/1.1" 403 765
+192.168.1.60 - - [17/Feb/2025:11:05:50 +0000] "GET /about HTTP/1.1" 200 1502
+203.0.113.85 - - [17/Feb/2025:11:10:45 +0000] "GET /admin HTTP/1.1" 403 1892
+45.67.89.101 - - [17/Feb/2025:11:15:30 +0000] "GET /wp-login.php HTTP/1.1" 403 765
+198.51.100.170 - - [17/Feb/2025:11:20:10 +0000] "POST /api/data HTTP/1.1" 200 1032
+
+
+==== Contents of /home/student/applog.txt ====
+Feb 17 10:05:15 server1 app[6789]: INFO: User login successful (userID=12543)
+Feb 17 10:10:45 server1 app[6789]: ERROR: Database connection failed
+Feb 17 10:15:30 server1 app[6789]: INFO: Scheduled backup completed successfully
+Feb 17 10:17:20 server1 app[6789]: CRITICAL: Unauthorized API access attempt from 192.168.1.50
+Feb 17 10:18:45 server1 app[6789]: ERROR: Unexpected input received from user ID 78901
+Feb 17 10:20:10 server1 app[6789]: WARNING: High memory usage detected
+Feb 17 10:22:50 server1 app[6789]: INFO: Service restarted successfully
+Feb 17 10:25:33 server1 app[6789]: INFO: Payment processed for Order #30492
+Feb 17 10:30:05 server1 app[6789]: INFO: Email sent to customer@example.com
+Feb 17 10:35:20 server1 app[6789]: ERROR: Attempted access to restricted endpoint /admin/api from 203.0.113.88
+Feb 17 10:40:35 server1 app[6789]: INFO: User logout successful (userID=12543)
+Feb 17 10:45:15 server1 app[6789]: INFO: Scheduled data sync completed successfully
+Feb 17 10:50:00 server1 app[6789]: CRITICAL: Failed payment attempt for Order #30493
+Feb 17 10:52:30 server1 app[6789]: WARNING: IP 203.0.113.99 accessing API too frequently
+Feb 17 10:55:40 server1 app[6789]: INFO: Order #30494 processed successfully
+Feb 17 11:00:10 server1 app[6789]: ERROR: Payment gateway timeout
+Feb 17 11:05:35 server1 app[6789]: CRITICAL: Unauthorized access to admin panel from 203.0.113.100
+Feb 17 11:10:00 server1 app[6789]: INFO: Session timeout for user 12543
+Feb 17 11:12:50 server1 app[6789]: INFO: User login successful (userID=67890)
+Feb 17 11:15:05 server1 app[6789]: ERROR: Unexpected system failure, unable to process payment
+Feb 17 11:20:15 server1 app[6789]: INFO: Data export completed successfully
+
+
+==== Contents of /home/student/authlog.txt ====
+Feb 17 10:10:05 server1 sshd[2143]: Accepted password for alice from 192.168.1.10 port 55234 ssh2
+Feb 17 10:12:30 server1 sshd[2143]: Accepted password for bob from 192.168.1.20 port 49876 ssh2
+Feb 17 10:15:14 server1 sshd[2143]: Failed password for invalid user admin from 192.168.1.15 port 54321 ssh2
+Feb 17 10:16:41 server1 sshd[2143]: Failed password for root from 203.0.113.42 port 3389 ssh2
+Feb 17 10:18:33 server1 sshd[2143]: Failed password for user2 from 45.67.89.101 port 2200 ssh2
+Feb 17 10:19:10 server1 sshd[2143]: Failed password for user2 from 45.67.89.101 port 2201 ssh2
+Feb 17 10:19:45 server1 sshd[2143]: Failed password for user2 from 45.67.89.101 port 2202 ssh2
+Feb 17 10:21:30 server1 sshd[2143]: Accepted publickey for devops from 192.168.1.30 port 60234 ssh2: RSA SHA256:X1Y2Z3A4B5C6
+Feb 17 10:25:10 server1 sshd[2143]: Failed password for root from 192.168.1.55 port 60000 ssh2
+Feb 17 10:26:32 server1 sshd[2143]: Connection closed by 192.168.1.25 port 50432 [preauth]
+Feb 17 10:30:47 server1 sshd[2143]: Failed password for root from 203.0.113.42 port 3390 ssh2
+Feb 17 10:35:55 server1 sshd[2143]: Failed password for invalid user test from 198.51.100.21 port 40022 ssh2
+Feb 17 10:40:11 server1 sshd[2143]: Accepted password for carol from 192.168.1.40 port 49999 ssh2
+Feb 17 10:45:01 server1 sshd[2143]: Failed password for root from 203.0.113.42 port 3391 ssh2
+Feb 17 10:50:33 server1 sshd[2143]: Failed password for invalid user xyz from 45.67.89.102 port 30010 ssh2
+Feb 17 10:55:22 server1 sshd[2143]: Accepted password for frank from 192.168.1.15 port 59239 ssh2
+Feb 17 11:00:04 server1 sshd[2143]: Failed password for root from 203.0.113.42 port 35000 ssh2
+Feb 17 11:05:15 server1 sshd[2143]: Failed password for user3 from 45.67.89.103 port 29015 ssh2
+Feb 17 11:10:26 server1 sshd[2143]: Accepted password for eve from 192.168.1.50 port 63432 ssh2
+Feb 17 11:15:30 server1 sshd[2143]: Failed password for invalid user admin from 198.51.100.33 port 50321 ssh2
+Feb 17 11:20:05 server1 sshd[2143]: Accepted password for admin from 192.168.1.60 port 48763 ssh2
+Feb 17 11:25:00 server1 sshd[2143]: Failed password for root from 203.0.113.42 port 35001 ssh2
+
+
+==== Contents of /home/student/systemlog.txt ====
+Feb 17 10:05:05 server1 kernel: [12345.678901] Out of memory: Killed process 9876 (java)
+Feb 17 10:07:30 server1 CRON[4567]: (root) CMD (/usr/bin/python3 /opt/scripts/backup.py)
+Feb 17 10:10:00 server1 kernel: [12346.789012] Firewall: blocked connection from 10.0.0.99 to 192.168.1.1 on port 22
+Feb 17 10:12:15 server1 sudo: user3 : TTY=pts/2 ; PWD=/home/user3 ; USER=root ; COMMAND=/bin/bash
+Feb 17 10:14:45 server1 kernel: [12348.123456] WARNING: Suspicious activity detected on eth0 (IP: 203.0.113.99)
+Feb 17 10:17:30 server1 CRON[5678]: (root) CMD (/usr/bin/python3 /opt/scripts/malware.py)
+Feb 17 10:22:00 server1 kernel: [12349.567890] System reboot scheduled for maintenance
+Feb 17 10:23:35 server1 kernel: [12350.789123] Firewall: blocked connection from 10.0.0.105 to 192.168.1.1 on port 23
+Feb 17 10:25:12 server1 CRON[6789]: (user3) CMD (/usr/bin/python3 /opt/scripts/malicious.py)
+Feb 17 10:27:40 server1 kernel: [12351.123456] WARNING: Potential DDoS detected on interface eth1
+Feb 17 10:30:10 server1 sudo: user2 : TTY=pts/1 ; PWD=/home/user2 ; USER=root ; COMMAND=/bin/sh
+Feb 17 10:35:50 server1 kernel: [12352.567890] Unusual number of connections from 203.0.113.100
+Feb 17 10:37:25 server1 kernel: [12353.789012] Blocking connection from 10.0.0.99 to 192.168.1.1 on port 22
+Feb 17 10:40:01 server1 kernel: [12354.123456] Network interface eth2 experiencing unusual traffic patterns
+Feb 17 10:45:00 server1 CRON[7890]: (root) CMD (/usr/bin/python3 /opt/scripts/cleanup.py)
+Feb 17 10:50:35 server1 kernel: [12355.789012] Firewall: blocked connection from 192.168.1.12 to 192.168.1.1 on port 21
+Feb 17 10:55:12 server1 kernel: [12356.123456] SYSTEM ALERT: High CPU usage detected
+Feb 17 10:57:00 server1 kernel: [12357.567890] Unauthorized access attempt detected on port 3389
+Feb 17 10:59:05 server1 CRON[8901]: (user1) CMD (/usr/bin/python3 /opt/scripts/security_check.py)
+
+

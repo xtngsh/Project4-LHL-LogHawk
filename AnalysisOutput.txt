@@ -1,0 +1,19 @@
+CRITICAL Entries: 3
+Failed Passwords: 14
+
+== Failed Passwords by IP ==
+192.168.1.15: 1
+203.0.113.42: 5
+45.67.89.101: 3
+192.168.1.55: 1
+198.51.100.21: 1
+45.67.89.102: 1
+45.67.89.103: 1
+198.51.100.33: 1
+
+== CRITICAL Entries by IP ==
+192.168.1.50: 1
+Unknown: 1
+203.0.113.100: 1
+
+== .sh Script Executions by IP ==
